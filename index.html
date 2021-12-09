@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+  <header>
+    <a href="#" class="title"> Welcome</a>
+    <!-- <ul>
+      <li><a href="#" class="active">Hellow World</a></li>
+      <li><a href="#sec">FANTASY</a></li>
+      <li><a href="#">CONNECT</a></li>
+      <li><a href="#">DISCONNECT</a></li>
+      <li><a href="#">REALITY</a></li>
+    </ul> -->
+  </header>
+  <div class="color">
+    <section>
+      <img src="connect.png" id="eyes">
+
+
+      <img src="building.png" id="behind">
+      <h2 id="text">HELLO WORLD</h2>
+      <a href="#hello" id="btn">Explore</a>
+      <img src="box.png" id="front"></img>
+    </section>
+</div>
+
+  <div class="hello" id="hello">
+
+
+<h2> Welcome</h2>
+<p>Welcome to the internet world! Here<br><br>
+  You get to choose your own identity: Your name, your gender, your age, your profession, how you look, dress, talk and behave.
+  <br><br> You can decide who your mom is, who your dad is, how much property you have, earn enough admiration and live a shining life.</p>
+</div>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="f.jpg" alt="Avatar" style="width:100%;height:100%;">
+
+        </div>
+        <div class="flip-card-back">
+          <h1>Fantasy</h1>
+          <p></p>
+          <p>The internet world is like a fantasy, with no restrcition and laws, you can do anything and be anyone.  </p>
+        </div>
+      </div>
+    </div>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="c.jpg" alt="Avatar" style="width:100%;height:100%;">
+
+        </div>
+        <div class="flip-card-back">
+          <h1>Connect</h1>
+          <p>The connection happens on fingertip, type something and you gets connected</p>
+
+        </div>
+      </div>
+    </div>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="r.jpg" alt="Avatar" style="width:100%;height:100%;">
+
+        </div>
+        <div class="flip-card-back">
+          <h1>Reality</h1>
+          <p>This is your new reality, you get to work all day everyday.</p>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  let eyes = document.getElementById('eyes');
+  let moon = document.getElementById('moon');
+  let behind = document.getElementById('behind');
+  let text = document.getElementById('text');
+  let btn = document.getElementById('btn');
+  let front = document.getElementById('front');
+
+
+  window.addEventListener('scroll', function(){
+    let value = window.scrollY;
+    eyes.style.left = value*0.3 +'px';
+    eyes.style.top = value*0.05 +'px';
+    behind.style.top = value*2 +'px';
+    behind.style.left = value*-5 +'px';
+    front.style.top = value*0.5 +'px';
+    text.style.marginLeft = value*2+'px';
+
+  })
+
+
+  document.addEventListener('mousemove', function(e) {
+  let body = document.querySelector('body');
+  let circle = document.getElementById('circle');
+  let left = e.offsetX;
+  let top = e.offsetY;
+  circle.style.left = left + 'px';
+  circle.style.top = top + 'px';
+});
+</script>
+  <script src="script.js" charset="utf-8"></script>
+  </body>
+</html>
