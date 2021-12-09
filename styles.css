@@ -1,0 +1,240 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lora&family=Patrick+Hand&display=swap');
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lora&family=Patrick+Hand&display=swap');
+</style>
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Abril Fatface', cursive;
+  scroll-behavior: smooth;
+}
+
+
+body{
+
+  max-height:100vh;
+  overflow-x: hidden;
+
+  background: black;
+
+}
+
+
+header{
+  position: absolute;
+  top: 0;
+  left:0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+header .title {
+  color:white;
+  font-weight:700;
+
+  text-decoration: none;
+  font-size: 2em;
+  text-transform:uppercase;
+  letter-spacing:2px;
+}
+
+header ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header ul li
+{
+  list=style: none;
+  margin-left: 20px;
+}
+
+header ul li a{
+  text-decoration: none;
+  padding: 6px 15px;
+  color: white;
+  border-radius:20px;
+
+}
+header ul li a:hover,
+header ul li a.active
+{
+  background: white;
+  color: #2b1055;
+}
+
+section::before{
+  content: '';
+  position:absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, black, transparent);
+  z-index: 1000;
+}
+
+section{
+  position: relative;
+  width:100%;
+  height: 100vh;
+  padding:100px;
+
+
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section img
+{
+  position: absolute;
+  top:0;
+  left:0;
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  pointer-events: none;
+
+}
+
+section img#moon{
+  z-index: 10;
+  mix-blend-mode: screen;
+}
+
+
+
+.fantasy img{
+  width: 100%;
+  display: flex;
+}
+#text{
+  position: absolute;
+  left: 20px;
+  top: 300px;
+  text-shadow: 2px 2px #FF0000;
+  color: white;
+  white-space: nowrap;
+  font-size: 7.5vw;
+  font-family: 'Abril Fatface', cursive;
+  z-index: 9;
+  transform: translateY(-100px);
+}
+
+.color {
+  width:100%;
+  height:100%;
+  color:black;
+  font-weight:bold;
+  animation: myanimation 10s infinite;
+}
+
+@keyframes myanimation {
+  0% {background: linear-gradient(black, #1c0522 , #7597de);}
+  25%{background: linear-gradient(black, #6F25F0);}
+  50%{background: linear-gradient(black, #DB0101);}
+  75%{background: linear-gradient(black,  #110522);}
+  100% {background-color: black;}
+}
+
+.hello{
+  position: relative;
+  padding:100px;
+  background: #1c0522;
+  font-family: 'Abril Fatface', cursive;
+}
+
+.hello h2{
+  font-size: 3em;
+  margin-bottom: 10px;
+
+  color: white;
+  writing-mode: vertical-rl;
+}
+
+.hello p{
+  font-size: 1.2em;
+  margin-left: 200px;
+  color: white;
+
+}
+
+
+
+
+
+
+#btn{
+  text-decoration: none;
+  display: inline=block;
+  padding: 8px 30px;
+  border-radius: 40px;
+  background: white;
+  color: black;
+  font-size: 1em;
+  z-index: 9;
+
+}
+
+.conv{
+
+  display:flex;
+  padding-left: 0;
+  flex-flow: row;
+}
+
+#btn:hover{
+  font-size:1.5em;
+}
+
+.flip-card {
+  background-color: transparent;
+
+  height: 500px;
+
+
+}
+
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+
+.flip-card-back {
+  background-color: black;
+  color: white;
+  transform: rotateY(180deg);
+}
